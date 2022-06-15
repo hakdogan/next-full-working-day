@@ -49,7 +49,7 @@ public class NextFullWorkingDay implements TemporalAdjuster
 
         Holiday holiday = new Holiday(dayOfMonth, month);
         if(holidays.contains(holiday)){
-            return adjustInto(result.plus(1, ChronoUnit.DAYS));
+            return adjustInto(result);
         }
         return result;
     }
